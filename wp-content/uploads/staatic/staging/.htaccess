@@ -1,0 +1,53 @@
+ErrorDocument 404 /http:/rootmee.com/404_not_found/index.html
+
+<If "%{REQUEST_URI} =~ m#^/http\://rootmee\.com/wp\-sitemap\-index\.xsl#i">
+  ForceType "application/xml; charset=UTF-8"
+</If>
+
+<If "%{REQUEST_URI} =~ m#^/http\://rootmee\.com/wp\-json/#i">
+  ForceType "application/json; charset=UTF-8"
+</If>
+
+<If "%{REQUEST_URI} =~ m#^/http\://rootmee\.com/comments/feed/#i">
+  ForceType "application/rss+xml; charset=UTF-8"
+</If>
+
+<If "%{REQUEST_URI} =~ m#^/http\://rootmee\.com/feed/#i">
+  ForceType "application/rss+xml; charset=UTF-8"
+</If>
+
+<If "%{REQUEST_URI} =~ m#^/http\://rootmee\.com/wp\-sitemap\.xsl#i">
+  ForceType "application/xml; charset=UTF-8"
+</If>
+
+<If "%{REQUEST_URI} =~ m#^/http\://rootmee\.com/sample\-page/feed/#i">
+  ForceType "application/rss+xml; charset=UTF-8"
+</If>
+
+<If "%{REQUEST_URI} =~ m#^/http\://rootmee\.com/wp\-json/wp/v2/pages/2#i">
+  ForceType "application/json; charset=UTF-8"
+</If>
+
+<If "%{REQUEST_URI} =~ m#^/http\://rootmee\.com/wp\-json/wp/v2/posts/1#i">
+  ForceType "application/json; charset=UTF-8"
+</If>
+
+<If "%{REQUEST_URI} =~ m#^/http\://rootmee\.com/2022/10/19/hello\-world/feed/#i">
+  ForceType "application/rss+xml; charset=UTF-8"
+</If>
+
+<If "%{REQUEST_URI} =~ m#^/http\://rootmee\.com/author/root/feed/#i">
+  ForceType "application/rss+xml; charset=UTF-8"
+</If>
+
+<If "%{REQUEST_URI} =~ m#^/http\://rootmee\.com/category/uncategorized/feed/#i">
+  ForceType "application/rss+xml; charset=UTF-8"
+</If>
+
+<If "%{REQUEST_URI} =~ m#^/http\://rootmee\.com/wp\-json/wp/v2/users/1#i">
+  ForceType "application/json; charset=UTF-8"
+</If>
+
+<If "%{REQUEST_URI} =~ m#^/http\://rootmee\.com/wp\-json/wp/v2/categories/1#i">
+  ForceType "application/json; charset=UTF-8"
+</If>
