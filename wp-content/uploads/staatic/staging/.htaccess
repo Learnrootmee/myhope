@@ -4,10 +4,6 @@ ErrorDocument 404 /myhope/404_not_found/index.html
   ForceType "application/xml; charset=UTF-8"
 </If>
 
-<If "%{REQUEST_URI} =~ m#^/myhope/feed/#i">
-  ForceType "application/rss+xml; charset=UTF-8"
-</If>
-
 <If "%{REQUEST_URI} =~ m#^/myhope/comments/feed/#i">
   ForceType "application/rss+xml; charset=UTF-8"
 </If>
@@ -16,12 +12,12 @@ ErrorDocument 404 /myhope/404_not_found/index.html
   ForceType "application/json; charset=UTF-8"
 </If>
 
-<If "%{REQUEST_URI} =~ m#^/myhope/wp\-sitemap\.xsl#i">
-  ForceType "application/xml; charset=UTF-8"
+<If "%{REQUEST_URI} =~ m#^/myhope/feed/#i">
+  ForceType "application/rss+xml; charset=UTF-8"
 </If>
 
-<If "%{REQUEST_URI} =~ m#^/myhope/sample\-page/feed/#i">
-  ForceType "application/rss+xml; charset=UTF-8"
+<If "%{REQUEST_URI} =~ m#^/myhope/wp\-sitemap\.xsl#i">
+  ForceType "application/xml; charset=UTF-8"
 </If>
 
 <If "%{REQUEST_URI} =~ m#^/myhope/wp\-json/wp/v2/pages/2#i">
@@ -29,10 +25,6 @@ ErrorDocument 404 /myhope/404_not_found/index.html
 </If>
 
 <If "%{REQUEST_URI} =~ m#^/myhope/2022/10/19/hello\-world/feed/#i">
-  ForceType "application/rss+xml; charset=UTF-8"
-</If>
-
-<If "%{REQUEST_URI} =~ m#^/myhope/author/root/feed/#i">
   ForceType "application/rss+xml; charset=UTF-8"
 </If>
 
@@ -46,6 +38,10 @@ ErrorDocument 404 /myhope/404_not_found/index.html
 
 <If "%{REQUEST_URI} =~ m#^/myhope/wp\-json/wp/v2/categories/1#i">
   ForceType "application/json; charset=UTF-8"
+</If>
+
+<If "%{REQUEST_URI} =~ m#^/myhope/author/root/feed/#i">
+  ForceType "application/rss+xml; charset=UTF-8"
 </If>
 
 <If "%{REQUEST_URI} =~ m#^/myhope/wp\-json/wp/v2/users/1#i">
